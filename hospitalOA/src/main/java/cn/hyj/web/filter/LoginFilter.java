@@ -28,7 +28,7 @@ public class LoginFilter implements Filter {
             chain.doFilter(servletRequest, servletResponse);
             return;
         }
-        //System.out.println("filter_username：" + username + "\n");
+        System.out.println("filter_username：" + username + "\n");
         if (username == null || "".equals(username)) {
             servletResponse.sendRedirect("http://localhost:8080/hospitalOA/view/login.html");
         } else {
